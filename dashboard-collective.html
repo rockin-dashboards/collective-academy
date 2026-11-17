@@ -583,13 +583,13 @@
         </div>
         <div class="card">
           <h3>Ventas por canal</h3>
-          <div class="cardsub">Inscripciones del 13-17 nov por fuente de tráfico</div>
+          <div class="cardsub">Intenciones de compra reales (seguimiento vía UTM) · 13-17 nov</div>
           <div class="chart-box sm"><canvas id="bfSalesChart"></canvas></div>
         </div>
       </div>
 
       <div class="card" style="margin-top:16px;border-left:3px solid var(--lime)">
-        <h3>Detalle de ventas por canal · Buen Fin (13-17 nov)</h3>
+        <h3>Intenciones de compra por canal · Buen Fin (13-17 nov)</h3>
         <div class="cardsub">Inscripciones del Sheets filtradas por fecha + UTM de campaña</div>
         <div class="krow" id="bfSalesKpis" style="margin-top:12px"></div>
         <div class="tbl-wrap" style="border:none;margin-top:12px">
@@ -645,7 +645,7 @@
 // ═══════════════════════════════════════════════════════════════════
 // DASHBOARD META — update this on every publish
 // ═══════════════════════════════════════════════════════════════════
-const DASH_UPDATE={date:'2026-11-13T18:00:00Z',by:'Luz'};
+const DASH_UPDATE={date:'2026-11-17T22:00:00Z',by:'Luz'};
 
 // ═══════════════════════════════════════════════════════════════════
 // SNAPSHOT META — when the hardcoded data objects were last captured
@@ -653,7 +653,7 @@ const DASH_UPDATE={date:'2026-11-13T18:00:00Z',by:'Luz'};
 // Netlify failures), but this timestamp confirms the objects below
 // reflect the latest quarterly numbers.
 // ═══════════════════════════════════════════════════════════════════
-const SNAPSHOT_META={date:'2026-11-13T18:00:00Z',by:'Luz',note:'Q4 corte 13-nov — Buen Fin tab + Meta API live + 29 ventas pago + 46 cortesías'};
+const SNAPSHOT_META={date:'2026-11-17T22:00:00Z',by:'Luz',note:'Q4 corte 17-nov — Buen Fin datos completos Nov 4-17 + 6 intenciones de compra reales vía UTM'};
 
 function renderUpdateInfo(){
   const pad=n=>String(n).padStart(2,'0');
@@ -1196,35 +1196,46 @@ const googleKeywords={
 // ── Buen Fin 2026 data (13-17 nov, warm-up desde 4 nov) ──
 const buenFinData={
   meta:{
-    campaign:{name:'Buen_Fin',st:'active',spend:3889.14,imp:120475,reach:96552,clicks:1800,ctr:1.49,cpc:2.16,conv:11,convType:'aplicaciones',cpa:353.56,freq:1.25},
-    rmkt:{name:'RMKT · Buen Fin',st:'active',spend:1753.48,imp:20434,reach:6386,clicks:353,ctr:1.73,cpc:4.97,conv:5,convType:'aplicaciones',cpa:350.70,freq:3.20}
+    campaign:{name:'Buen_Fin',st:'active',spend:11338.84,imp:313198,reach:247471,clicks:4632,ctr:1.48,cpc:2.45,conv:27,convType:'aplicaciones',cpa:419.96,freq:1.27},
+    rmkt:{name:'RMKT · Buen Fin',st:'active',spend:10862.39,imp:125487,reach:17945,clicks:1983,ctr:1.58,cpc:5.48,conv:15,convType:'aplicaciones',cpa:724.16,freq:6.99}
   },
-  google:{name:'Buen Fin · Search',st:'active',spend:149.44,imp:78,clicks:25,ctr:32.05,cpc:5.98,conv:3,cpa:49.81},
-  ventasPorCanal:{meta:0,google:0,mail:0,whatsapp:0,organico:0},
-  ventasDetalle:[],
+  google:{name:'Buen Fin · Search',st:'active',spend:4560.52,imp:1531,clicks:423,ctr:27.63,cpc:10.78,conv:6,cpa:760.09},
+  ventasPorCanal:{meta:3,google:1,mail:2,whatsapp:0,organico:0},
+  ventasDetalle:[
+    {email:'paulinavazquezvilla9@gmail.com',ch:'meta',utm:'RO_MX_SAL_PRO_Buen_Fin',date:'11/13'},
+    {email:'eduardo.gonzalez.lopez@outlook.com',ch:'meta',utm:'RO_MX_SAL_PRO_Buen_Fin',date:'11/13'},
+    {email:'mariecort.96@gmail.com',ch:'meta',utm:'RO_MX_SAL_PRO_RMKT',date:'11/14'},
+    {email:'alfonsoalmazan@outlook.com',ch:'google',utm:'ro_mx_sal_pro_buen_fin',date:'11/13'},
+    {email:'alan.casme@gmail.com',ch:'mail',utm:'buen_fin_nov26',date:'11/16'},
+    {email:'amorenogzz89@gmail.com',ch:'mail',utm:'buen_fin_nov26_ultimo_dia',date:'11/17'}
+  ],
   totalIngresoBF:0
 };
 
 const buenFinCreatives=[
-  // Campaña directa — Warm-up (pausados)
-  {name:'Teaser Imagen',type:'IMG',phase:'Warm-up',camp:'Directa',adset:'ADV+',spend:1632.26,imp:62788,reach:53468,clicks:809,ctr:1.29,cpc:2.02,conv:7,cpa:233.18},
-  {name:'Teaser Imagen',type:'IMG',phase:'Warm-up',camp:'Directa',adset:'Cursos',spend:1080.49,imp:29220,reach:25594,clicks:484,ctr:1.66,cpc:2.23,conv:0,cpa:null},
-  {name:'Video Warm-up',type:'VID',phase:'Warm-up',camp:'Directa',adset:'ADV+',spend:615.25,imp:15448,reach:13679,clicks:267,ctr:1.73,cpc:2.30,conv:4,cpa:153.81},
-  {name:'Teaser Rojo',type:'IMG',phase:'Warm-up',camp:'Directa',adset:'ADV+',spend:338.29,imp:9214,reach:7464,clicks:136,ctr:1.48,cpc:2.49,conv:0,cpa:null},
-  {name:'Video Warm-up',type:'VID',phase:'Warm-up',camp:'Directa',adset:'Cursos',spend:214.30,imp:3697,reach:3390,clicks:100,ctr:2.70,cpc:2.14,conv:0,cpa:null},
-  // Campaña directa — Promo (activos, recién lanzados hoy)
-  {name:'Teaser Colores',type:'IMG',phase:'Promo',camp:'Directa',adset:'Cursos',spend:9.48,imp:190,reach:127,clicks:5,ctr:2.63,cpc:1.90,conv:0,cpa:null},
-  {name:'Teaser Rojo',type:'IMG',phase:'Promo',camp:'Directa',adset:'Cursos',spend:4.93,imp:80,reach:55,clicks:3,ctr:3.75,cpc:1.64,conv:0,cpa:null},
-  {name:'Teaser Rojo Imagen',type:'IMG',phase:'Promo',camp:'Directa',adset:'ADV+',spend:2.55,imp:60,reach:54,clicks:0,ctr:0,cpc:null,conv:0,cpa:null},
-  {name:'Teaser Rojo Imagen',type:'IMG',phase:'Promo',camp:'Directa',adset:'Cursos',spend:1.65,imp:20,reach:14,clicks:0,ctr:0,cpc:null,conv:0,cpa:null},
-  // RMKT — Warm-up (pausados)
-  {name:'Teaser Imagen',type:'IMG',phase:'Warm-up',camp:'RMKT',adset:'RMKT BF',spend:1026.61,imp:14827,reach:5267,clicks:256,ctr:1.73,cpc:4.01,conv:1,cpa:1026.61},
-  {name:'Video Warm-up',type:'VID',phase:'Warm-up',camp:'RMKT',adset:'RMKT BF',spend:707.49,imp:5551,reach:2732,clicks:99,ctr:1.78,cpc:7.15,conv:4,cpa:176.87},
-  // RMKT — Promo (activos, recién lanzados)
-  {name:'Video Promo',type:'VID',phase:'Promo',camp:'RMKT',adset:'RMKT BF',spend:27.12,imp:166,reach:109,clicks:1,ctr:0.60,cpc:27.12,conv:0,cpa:null},
-  {name:'Teaser Colores',type:'IMG',phase:'Promo',camp:'RMKT',adset:'RMKT BF',spend:18.41,imp:71,reach:24,clicks:0,ctr:0,cpc:null,conv:0,cpa:null},
-  {name:'Teaser Rojo Imagen',type:'IMG',phase:'Promo',camp:'RMKT',adset:'RMKT BF',spend:4.57,imp:51,reach:36,clicks:0,ctr:0,cpc:null,conv:0,cpa:null},
-  {name:'Teaser Rojo',type:'IMG',phase:'Promo',camp:'RMKT',adset:'RMKT BF',spend:3.52,imp:49,reach:31,clicks:0,ctr:0,cpc:null,conv:0,cpa:null}
+  // Campaña directa — Warm-up (4-12 nov)
+  {name:'Teaser Imagen',type:'IMG',phase:'Warm-up',camp:'Directa',adset:'ADV+',spend:1675.70,imp:63665,reach:54154,clicks:818,ctr:1.28,cpc:2.05,conv:7,cpa:239.39},
+  {name:'Teaser Imagen',type:'IMG',phase:'Warm-up',camp:'Directa',adset:'Cursos',spend:1136.35,imp:30339,reach:26734,clicks:491,ctr:1.62,cpc:2.31,conv:0,cpa:null},
+  {name:'Video Warm-up',type:'VID',phase:'Warm-up',camp:'Directa',adset:'ADV+',spend:615.52,imp:15454,reach:13685,clicks:267,ctr:1.73,cpc:2.31,conv:4,cpa:153.88},
+  {name:'Teaser Rojo',type:'IMG',phase:'Warm-up',camp:'Directa',adset:'ADV+',spend:341.63,imp:9267,reach:7520,clicks:136,ctr:1.47,cpc:2.51,conv:0,cpa:null},
+  {name:'Video Warm-up',type:'VID',phase:'Warm-up',camp:'Directa',adset:'Cursos',spend:215.97,imp:3727,reach:3422,clicks:100,ctr:2.68,cpc:2.16,conv:0,cpa:null},
+  // Campaña directa — Promo (13-17 nov)
+  {name:'Teaser Colores',type:'IMG',phase:'Promo',camp:'Directa',adset:'ADV+',spend:3230.74,imp:91721,reach:83155,clicks:1237,ctr:1.35,cpc:2.61,conv:7,cpa:461.53},
+  {name:'Teaser Colores',type:'IMG',phase:'Promo',camp:'Directa',adset:'Cursos',spend:3325.47,imp:81396,reach:72126,clicks:1296,ctr:1.59,cpc:2.57,conv:8,cpa:415.68},
+  {name:'Video Promo',type:'VID',phase:'Promo',camp:'Directa',adset:'ADV+',spend:335.51,imp:7137,reach:6750,clicks:122,ctr:1.71,cpc:2.75,conv:0,cpa:null},
+  {name:'Video Promo',type:'VID',phase:'Promo',camp:'Directa',adset:'Cursos',spend:341.77,imp:7019,reach:6454,clicks:125,ctr:1.78,cpc:2.73,conv:1,cpa:341.77},
+  {name:'Teaser Rojo',type:'IMG',phase:'Promo',camp:'Directa',adset:'Cursos',spend:47.21,imp:1329,reach:1262,clicks:18,ctr:1.35,cpc:2.62,conv:0,cpa:null},
+  {name:'Teaser Rojo Imagen',type:'IMG',phase:'Promo',camp:'Directa',adset:'Cursos',spend:43.78,imp:1361,reach:1295,clicks:15,ctr:1.10,cpc:2.92,conv:0,cpa:null},
+  {name:'Teaser Rojo Imagen',type:'IMG',phase:'Promo',camp:'Directa',adset:'ADV+',spend:46.28,imp:1104,reach:1054,clicks:16,ctr:1.45,cpc:2.89,conv:0,cpa:null},
+  {name:'Teaser Rojo',type:'IMG',phase:'Promo',camp:'Directa',adset:'ADV+',spend:2.27,imp:30,reach:28,clicks:0,ctr:0,cpc:null,conv:0,cpa:null},
+  // RMKT — Warm-up (4-12 nov)
+  {name:'Teaser Imagen',type:'IMG',phase:'Warm-up',camp:'RMKT',adset:'RMKT BF',spend:1049.01,imp:15112,reach:5311,clicks:257,ctr:1.70,cpc:4.08,conv:1,cpa:1049.01},
+  {name:'Video Warm-up',type:'VID',phase:'Warm-up',camp:'RMKT',adset:'RMKT BF',spend:712.83,imp:5607,reach:2754,clicks:103,ctr:1.84,cpc:6.92,conv:5,cpa:142.57},
+  // RMKT — Promo (13-17 nov)
+  {name:'Teaser Colores',type:'IMG',phase:'Promo',camp:'RMKT',adset:'RMKT BF',spend:6735.10,imp:80429,reach:15869,clicks:1275,ctr:1.59,cpc:5.28,conv:8,cpa:841.89},
+  {name:'Video Promo',type:'VID',phase:'Promo',camp:'RMKT',adset:'RMKT BF',spend:1443.33,imp:14407,reach:5995,clicks:213,ctr:1.48,cpc:6.78,conv:0,cpa:null},
+  {name:'Teaser Rojo',type:'IMG',phase:'Promo',camp:'RMKT',adset:'RMKT BF',spend:891.31,imp:9559,reach:4284,clicks:128,ctr:1.34,cpc:6.96,conv:1,cpa:891.31},
+  {name:'Teaser Rojo Imagen',type:'IMG',phase:'Promo',camp:'RMKT',adset:'RMKT BF',spend:45.50,imp:541,reach:412,clicks:8,ctr:1.48,cpc:5.69,conv:0,cpa:null}
 ];
 
 // ═══════════════════════════════════════════════════════════════════
@@ -1727,8 +1738,8 @@ async function renderBuenFin(){
     <div class="kc mc"><div class="kl">Conversiones totales</div><div class="kv mono">${totalConv}</div><div class="kf">Meta ${totalMetaConv} apps + Google ${gConv} conv · CPA ${totalCPA>0?money(totalCPA):'—'}</div></div>
     <div class="kc"><div class="kl">Impresiones</div><div class="kv mono">${num(totalImp)}</div><div class="kf">Alcance Meta: ${num(totalReach)}</div></div>
     <div class="kc"><div class="kl">Clics</div><div class="kv mono">${num(totalClicks)}</div><div class="kf">Meta ${num(mc.clicks+rmk.clicks)} + Google ${num(g.clicks)}</div></div>
-    <div class="kc ${bfVentas>0?'good':''}"><div class="kl">Ventas Buen Fin</div><div class="kv mono">${bfVentas}</div><div class="kf">${buenFinData.totalIngresoBF>0?money(buenFinData.totalIngresoBF):'Periodo inicia hoy 13 nov'}</div></div>
-    <div class="kc"><div class="kl">Días activos</div><div class="kv mono">10</div><div class="kf">Warm-up 9d + Promo 5d</div></div>
+    <div class="kc ${bfVentas>0?'good':''}"><div class="kl">Intenciones de compra</div><div class="kv mono">${bfVentas}</div><div class="kf">${buenFinData.totalIngresoBF>0?money(buenFinData.totalIngresoBF):'Únicos registrados en seguimiento'}</div></div>
+    <div class="kc"><div class="kl">Días activos</div><div class="kv mono">14</div><div class="kf">Warm-up 9d (4-12 nov) + Promo 5d (13-17 nov)</div></div>
   `;
 
   const rows=[mc,rmk];
@@ -1755,7 +1766,7 @@ async function renderBuenFin(){
   ];
   const totalBFV=channels.reduce((s,c)=>s+c.ventas,0);
 
-  document.getElementById('bfSalesKpis').innerHTML=channels.map(c=>`<div class="kc"><div class="kl">${c.name}</div><div class="kv mono" style="color:${c.color}">${c.ventas}</div><div class="kf">ventas Buen Fin</div></div>`).join('');
+  document.getElementById('bfSalesKpis').innerHTML=channels.map(c=>`<div class="kc"><div class="kl">${c.name}</div><div class="kv mono" style="color:${c.color}">${c.ventas}</div><div class="kf">intenciones de compra</div></div>`).join('');
 
   document.getElementById('bfSalesTable').querySelector('tbody').innerHTML=channels.map(c=>`<tr><td class="name" style="font-weight:600">${c.name}</td><td class="mono" style="font-size:11px;color:var(--muted)">${c.utm}</td><td class="mono" style="font-weight:700;color:${c.color}">${c.ventas}</td><td class="mono">—</td></tr>`).join('')+`<tr style="border-top:2px solid var(--line)"><td class="name" style="font-weight:700">Total</td><td></td><td class="mono" style="font-weight:700">${totalBFV}</td><td class="mono" style="font-weight:700">${buenFinData.totalIngresoBF>0?money(buenFinData.totalIngresoBF):'—'}</td></tr>`;
 
@@ -1827,9 +1838,9 @@ async function renderBuenFin(){
     bfIns.push({cls:'good',k:'TOP CREATIVO',h:`"${topCr.name}" (${topCr.camp}) con mejor CPA: ${money(topCr.cpa)}`,p:`${topCr.conv} conversiones con <b>${money(topCr.spend)}</b> de inversión. Tipo: ${topCr.type==='VID'?'Video':'Imagen'}, fase: ${topCr.phase}. Los videos de warm-up muestran buen rendimiento inicial.`});
   }
   if(bfVentas===0){
-    bfIns.push({cls:'watch',k:'VENTAS',h:'Buen Fin inicia hoy — 0 ventas registradas',p:'El periodo promocional es <b>13-17 nov</b>. Las ventas se irán registrando en el Sheets conforme entren pagos. Monitorear diariamente para medir conversión real por canal.'});
+    bfIns.push({cls:'watch',k:'SEGUIMIENTO',h:'0 intenciones de compra registradas',p:'Las intenciones se registran en el Sheets de seguimiento conforme los leads completan el primer paso de compra vía UTM.'});
   }else{
-    bfIns.push({cls:'good',k:'VENTAS',h:`${bfVentas} ventas en el periodo Buen Fin`,p:`Distribución: Meta <b>${buenFinData.ventasPorCanal.meta}</b>, Google <b>${buenFinData.ventasPorCanal.google}</b>, Email <b>${buenFinData.ventasPorCanal.mail}</b>, WhatsApp <b>${buenFinData.ventasPorCanal.whatsapp}</b>.`});
+    bfIns.push({cls:'good',k:'SEGUIMIENTO',h:`${bfVentas} intenciones de compra reales (únicos) en Buen Fin`,p:`Vía UTM en tracking sheet: Meta <b>${buenFinData.ventasPorCanal.meta}</b> (2 prosp. + 1 RMKT), Google <b>${buenFinData.ventasPorCanal.google}</b>, Email <b>${buenFinData.ventasPorCanal.mail}</b>. ${buenFinData.totalIngresoBF>0?'Ingreso: '+money(buenFinData.totalIngresoBF):'Sin inscripciones completadas aún en el sheet de cursos.'}`});
   }
   document.getElementById('bfInsights').innerHTML=bfIns.map(insHTML).join('');
 }
