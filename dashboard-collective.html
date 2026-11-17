@@ -1790,7 +1790,8 @@ async function renderBuenFin(){
   }
 
   // Creativos table
-  const sorted=[...buenFinCreatives].sort((a,b)=>b.spend-a.spend);
+  const phaseOrd={'Warm-up':0,'Promo':1};
+  const sorted=[...buenFinCreatives].sort((a,b)=>(phaseOrd[a.phase]||0)-(phaseOrd[b.phase]||0)||b.spend-a.spend);
   const crTbody=document.getElementById('bfCreativesTable')?.querySelector('tbody');
   if(crTbody){
     crTbody.innerHTML=sorted.map(c=>{
