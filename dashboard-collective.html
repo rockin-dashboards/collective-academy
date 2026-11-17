@@ -309,6 +309,10 @@
         <span class="idx">03</span>
         <div class="ntxt"><div class="ntitle">Campañas</div><div class="nsub">Meta + Google Ads</div></div>
       </div>
+      <div class="nav-item" data-sec="sec4">
+        <span class="idx">04</span>
+        <div class="ntxt"><div class="ntitle">Buen Fin</div><div class="nsub">13-17 nov · Promo especial</div></div>
+      </div>
     </nav>
     <div class="sidebar-sources">
       <div class="stitle">Conexiones</div>
@@ -531,6 +535,104 @@
       <div class="insights" id="campInsights"></div>
   </div>
 
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 04 · BUEN FIN 2026                                    -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="sec4">
+    <div class="sec-head">
+      <h2>Buen Fin 2026 · 13-17 nov</h2>
+      <p class="sec-sub">Campaña especial: warm-up desde 4 nov, promoción activa 13-17 nov · Meta + Google + Mail + WhatsApp</p>
+    </div>
+
+      <div class="card" style="margin-bottom:16px;border-left:3px solid var(--magenta)">
+        <h3>Fases de campaña</h3>
+        <div class="cardsub">Warm-up de creativos desde el 4 de noviembre, promoción activa desde el 13</div>
+        <div style="display:flex;gap:0;margin-top:12px;border-radius:8px;overflow:hidden;height:36px;font-family:'IBM Plex Mono';font-size:11px">
+          <div style="flex:9;background:var(--violet-dim);display:flex;align-items:center;justify-content:center;color:var(--violet);font-weight:600">Warm-up · 4-12 nov</div>
+          <div style="flex:5;background:var(--magenta-dim);display:flex;align-items:center;justify-content:center;color:var(--magenta);font-weight:600">Promo · 13-17 nov</div>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-top:4px;font-family:'IBM Plex Mono'">
+          <span>4 nov</span><span>↑ Hoy 13 nov</span><span>17 nov</span>
+        </div>
+      </div>
+
+      <div class="krow" id="bfKpis"></div>
+
+      <div class="card" style="margin-bottom:16px">
+        <h3>Campañas Meta — Buen Fin <span class="live-badge" id="bfMetaLive" style="display:none">LIVE</span></h3>
+        <div class="cardsub">Campaña directa + adset RMKT Buen Fin · cuenta 10100128746698390</div>
+        <div class="tbl-wrap" style="border:none">
+          <table id="bfMetaTable">
+            <thead><tr><th>Elemento</th><th>Estado</th><th>Inversión</th><th>Impr.</th><th>Alcance</th><th>Clics</th><th>CTR</th><th>CPC</th><th>Conv.</th><th>CPA</th><th>Freq.</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:16px">
+        <h3>Campaña Google — Buen Fin</h3>
+        <div class="cardsub">Búsqueda (SEA) · cuenta 715-055-6785</div>
+        <div id="bfGooglePanel"></div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Inversión por plataforma</h3>
+          <div class="cardsub">Distribución del gasto Buen Fin</div>
+          <div class="chart-box sm"><canvas id="bfSpendChart"></canvas></div>
+        </div>
+        <div class="card">
+          <h3>Ventas por canal</h3>
+          <div class="cardsub">Inscripciones del 13-17 nov por fuente de tráfico</div>
+          <div class="chart-box sm"><canvas id="bfSalesChart"></canvas></div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px;border-left:3px solid var(--lime)">
+        <h3>Detalle de ventas por canal · Buen Fin (13-17 nov)</h3>
+        <div class="cardsub">Inscripciones del Sheets filtradas por fecha + UTM de campaña</div>
+        <div class="krow" id="bfSalesKpis" style="margin-top:12px"></div>
+        <div class="tbl-wrap" style="border:none;margin-top:12px">
+          <table id="bfSalesTable">
+            <thead><tr><th>Canal</th><th>UTM Pattern</th><th>Ventas</th><th>Ingreso</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="note info" style="margin-top:12px">
+          <span>&#8505;</span>
+          <div><b>Atribución por UTM:</b> Meta → <code style="font-family:'IBM Plex Mono';font-size:11px">RO_MX_SAL_PRO_Buen_Fin</code> · Google → <code style="font-family:'IBM Plex Mono';font-size:11px">ro_mx_sal_pro_buen_fin</code> · Mail → <code style="font-family:'IBM Plex Mono';font-size:11px">buen_fin_2026</code> · WhatsApp → <code style="font-family:'IBM Plex Mono';font-size:11px">carrito_abandonado</code></div>
+        </div>
+      </div>
+
+      <!-- Creativos Buen Fin -->
+      <div class="card" style="margin-top:16px;border-left:3px solid var(--violet)">
+        <h3>Rendimiento por creativo · Buen Fin</h3>
+        <div class="cardsub">Warm-up (4-12 nov, pausados) + Promo (13-17 nov, activos) · Campaña directa + RMKT</div>
+        <div class="tbl-wrap" style="border:none;margin-top:12px">
+          <table id="bfCreativesTable">
+            <thead><tr><th>Creativo</th><th>Tipo</th><th>Fase</th><th>Campaña</th><th>Inversión</th><th>Impr.</th><th>Clics</th><th>CTR</th><th>CPC</th><th>Conv.</th><th>CPA</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Top creativo chart -->
+      <div class="grid-2" style="margin-top:16px">
+        <div class="card">
+          <h3>Inversión por creativo</h3>
+          <div class="cardsub">Top creativos por gasto</div>
+          <div class="chart-box sm"><canvas id="bfCreativeSpendChart"></canvas></div>
+        </div>
+        <div class="card">
+          <h3>Conversiones por creativo</h3>
+          <div class="cardsub">Aplicaciones generadas por cada creativo</div>
+          <div class="chart-box sm"><canvas id="bfCreativeConvChart"></canvas></div>
+        </div>
+      </div>
+
+      <div class="insights" id="bfInsights"></div>
+  </div>
+
   <footer>
     <div><span class="logo-sm">rockin<span class="dot">.</span></span> · growth team</div>
     <div style="margin-top:6px">Fuentes: Meta Ads API · Google Ads API · Google Sheets · Twenty CRM (conectada) · MXN · Q3 2026</div>
@@ -543,7 +645,7 @@
 // ═══════════════════════════════════════════════════════════════════
 // DASHBOARD META — update this on every publish
 // ═══════════════════════════════════════════════════════════════════
-const DASH_UPDATE={date:'2026-11-03T22:00:00Z',by:'Luz'};
+const DASH_UPDATE={date:'2026-11-13T18:00:00Z',by:'Luz'};
 
 // ═══════════════════════════════════════════════════════════════════
 // SNAPSHOT META — when the hardcoded data objects were last captured
@@ -551,7 +653,7 @@ const DASH_UPDATE={date:'2026-11-03T22:00:00Z',by:'Luz'};
 // Netlify failures), but this timestamp confirms the objects below
 // reflect the latest quarterly numbers.
 // ═══════════════════════════════════════════════════════════════════
-const SNAPSHOT_META={date:'2026-11-04T00:00:00Z',by:'Luz',note:'Q4 corte 4-nov — 29 ventas pago + 46 cortesías (Sheets) + Meta API live'};
+const SNAPSHOT_META={date:'2026-11-13T18:00:00Z',by:'Luz',note:'Q4 corte 13-nov — Buen Fin tab + Meta API live + 29 ventas pago + 46 cortesías'};
 
 function renderUpdateInfo(){
   const pad=n=>String(n).padStart(2,'0');
@@ -1091,6 +1193,40 @@ const googleKeywords={
   q4:[]
 };
 
+// ── Buen Fin 2026 data (13-17 nov, warm-up desde 4 nov) ──
+const buenFinData={
+  meta:{
+    campaign:{name:'Buen_Fin',st:'active',spend:3889.14,imp:120475,reach:96552,clicks:1800,ctr:1.49,cpc:2.16,conv:11,convType:'aplicaciones',cpa:353.56,freq:1.25},
+    rmkt:{name:'RMKT · Buen Fin',st:'active',spend:1753.48,imp:20434,reach:6386,clicks:353,ctr:1.73,cpc:4.97,conv:5,convType:'aplicaciones',cpa:350.70,freq:3.20}
+  },
+  google:{name:'Buen Fin · Search',st:'active',spend:149.44,imp:78,clicks:25,ctr:32.05,cpc:5.98,conv:3,cpa:49.81},
+  ventasPorCanal:{meta:0,google:0,mail:0,whatsapp:0,organico:0},
+  ventasDetalle:[],
+  totalIngresoBF:0
+};
+
+const buenFinCreatives=[
+  // Campaña directa — Warm-up (pausados)
+  {name:'Teaser Imagen',type:'IMG',phase:'Warm-up',camp:'Directa',adset:'ADV+',spend:1632.26,imp:62788,reach:53468,clicks:809,ctr:1.29,cpc:2.02,conv:7,cpa:233.18},
+  {name:'Teaser Imagen',type:'IMG',phase:'Warm-up',camp:'Directa',adset:'Cursos',spend:1080.49,imp:29220,reach:25594,clicks:484,ctr:1.66,cpc:2.23,conv:0,cpa:null},
+  {name:'Video Warm-up',type:'VID',phase:'Warm-up',camp:'Directa',adset:'ADV+',spend:615.25,imp:15448,reach:13679,clicks:267,ctr:1.73,cpc:2.30,conv:4,cpa:153.81},
+  {name:'Teaser Rojo',type:'IMG',phase:'Warm-up',camp:'Directa',adset:'ADV+',spend:338.29,imp:9214,reach:7464,clicks:136,ctr:1.48,cpc:2.49,conv:0,cpa:null},
+  {name:'Video Warm-up',type:'VID',phase:'Warm-up',camp:'Directa',adset:'Cursos',spend:214.30,imp:3697,reach:3390,clicks:100,ctr:2.70,cpc:2.14,conv:0,cpa:null},
+  // Campaña directa — Promo (activos, recién lanzados hoy)
+  {name:'Teaser Colores',type:'IMG',phase:'Promo',camp:'Directa',adset:'Cursos',spend:9.48,imp:190,reach:127,clicks:5,ctr:2.63,cpc:1.90,conv:0,cpa:null},
+  {name:'Teaser Rojo',type:'IMG',phase:'Promo',camp:'Directa',adset:'Cursos',spend:4.93,imp:80,reach:55,clicks:3,ctr:3.75,cpc:1.64,conv:0,cpa:null},
+  {name:'Teaser Rojo Imagen',type:'IMG',phase:'Promo',camp:'Directa',adset:'ADV+',spend:2.55,imp:60,reach:54,clicks:0,ctr:0,cpc:null,conv:0,cpa:null},
+  {name:'Teaser Rojo Imagen',type:'IMG',phase:'Promo',camp:'Directa',adset:'Cursos',spend:1.65,imp:20,reach:14,clicks:0,ctr:0,cpc:null,conv:0,cpa:null},
+  // RMKT — Warm-up (pausados)
+  {name:'Teaser Imagen',type:'IMG',phase:'Warm-up',camp:'RMKT',adset:'RMKT BF',spend:1026.61,imp:14827,reach:5267,clicks:256,ctr:1.73,cpc:4.01,conv:1,cpa:1026.61},
+  {name:'Video Warm-up',type:'VID',phase:'Warm-up',camp:'RMKT',adset:'RMKT BF',spend:707.49,imp:5551,reach:2732,clicks:99,ctr:1.78,cpc:7.15,conv:4,cpa:176.87},
+  // RMKT — Promo (activos, recién lanzados)
+  {name:'Video Promo',type:'VID',phase:'Promo',camp:'RMKT',adset:'RMKT BF',spend:27.12,imp:166,reach:109,clicks:1,ctr:0.60,cpc:27.12,conv:0,cpa:null},
+  {name:'Teaser Colores',type:'IMG',phase:'Promo',camp:'RMKT',adset:'RMKT BF',spend:18.41,imp:71,reach:24,clicks:0,ctr:0,cpc:null,conv:0,cpa:null},
+  {name:'Teaser Rojo Imagen',type:'IMG',phase:'Promo',camp:'RMKT',adset:'RMKT BF',spend:4.57,imp:51,reach:36,clicks:0,ctr:0,cpc:null,conv:0,cpa:null},
+  {name:'Teaser Rojo',type:'IMG',phase:'Promo',camp:'RMKT',adset:'RMKT BF',spend:3.52,imp:49,reach:31,clicks:0,ctr:0,cpc:null,conv:0,cpa:null}
+];
+
 // ═══════════════════════════════════════════════════════════════════
 // STATE
 // ═══════════════════════════════════════════════════════════════════
@@ -1150,6 +1286,7 @@ async function renderAll(q){
   renderMetaCampaigns(q).catch(e=>console.warn('Meta render error',e));
   renderGoogleCampaigns(q);
   renderInsightsAll(q);
+  renderBuenFin().catch(e=>console.warn('BuenFin render error',e));
 }
 
 function renderLiveOpportunities(data,q){
@@ -1527,6 +1664,174 @@ function renderInsightsAll(q){
     else{const avgCPC=camps.reduce((s,c)=>s+c.clicks,0)>0?totalSpend/camps.reduce((s,c)=>s+c.clicks,0):0;campIns.push({cls:avgCPC<5?'good':'watch',k:'CPC',h:`CPC promedio: ${money(avgCPC)}`,p:`Costo por clic promedio en campañas${campStatusFilter!=='all'?' '+campStatusFilter+'s':''}. ${avgCPC<5?'Dentro del rango saludable para el sector educativo.':'Considerar optimizar creativos para reducir CPC.'}`});}
   }
   document.getElementById('campInsights').innerHTML=campIns.map(insHTML).join('');
+}
+
+// ── 04 Buen Fin ──
+async function renderBuenFin(){
+  let mc=buenFinData.meta.campaign;
+  let rmk=buenFinData.meta.rmkt;
+  let isLive=false;
+
+  if(metaLive&&metaToken){
+    try{
+      const bfSince='2026-11-04',bfUntil='2026-11-17';
+      const fields='name,objective,effective_status,insights.time_range({"since":"'+bfSince+'","until":"'+bfUntil+'"}){spend,impressions,reach,clicks,ctr,cpc,actions,cost_per_action_type,frequency}';
+      const campData=await metaFetch(META_ACCOUNT_ID+'/campaigns?fields='+encodeURIComponent(fields)+'&filtering=[{"field":"name","operator":"CONTAIN","value":["Buen_Fin"]}]&limit=10');
+      for(const c of (campData.data||[])){
+        const ins=c.insights?.data?.[0];if(!ins)continue;
+        const spent=parseFloat(ins.spend||0);if(spent<10)continue;
+        const nm=(c.name||'');
+        const imps=parseInt(ins.impressions||0),reach=parseInt(ins.reach||0),clicks=parseInt(ins.clicks||0),ctr=parseFloat(ins.ctr||0),cpc=parseFloat(ins.cpc||0),freq=parseFloat(ins.frequency||0);
+        let conv=0;const acts=ins.actions||[];
+        const appAct=acts.find(a=>a.action_type==='submit_application');
+        const regAct=acts.find(a=>a.action_type==='offsite_conversion.fb_pixel_complete_registration');
+        if(appAct)conv=parseInt(appAct.value);else if(regAct)conv=parseInt(regAct.value);
+        const cpa=conv>0?spent/conv:null;
+        if(nm.includes('RMKT'))continue;
+        mc={name:nm.replace('RO_MX_SAL_PRO_',''),st:c.effective_status==='ACTIVE'?'active':'paused',spend:Math.round(spent*100)/100,imp:imps,reach,clicks,ctr:Math.round(ctr*100)/100,cpc:Math.round(cpc*100)/100,conv,convType:'aplicaciones',cpa:cpa?Math.round(cpa*100)/100:null,freq:Math.round(freq*100)/100};
+      }
+      const adsetData=await metaFetch(META_ACCOUNT_ID+'/adsets?fields='+encodeURIComponent('name,effective_status,campaign_name,insights.time_range({"since":"'+bfSince+'","until":"'+bfUntil+'"}){spend,impressions,reach,clicks,ctr,cpc,actions,frequency}')+'&filtering=[{"field":"name","operator":"CONTAIN","value":["Buen_Fin"]}]&limit=10');
+      for(const a of (adsetData.data||[])){
+        const ins=a.insights?.data?.[0];if(!ins)continue;
+        const spent=parseFloat(ins.spend||0);if(spent<10)continue;
+        if(!(a.campaign_name||'').includes('RMKT'))continue;
+        const imps=parseInt(ins.impressions||0),reach=parseInt(ins.reach||0),clicks=parseInt(ins.clicks||0),ctr=parseFloat(ins.ctr||0),cpc=parseFloat(ins.cpc||0),freq=parseFloat(ins.frequency||0);
+        let conv=0;const acts=ins.actions||[];
+        const appAct=acts.find(a2=>a2.action_type==='submit_application');if(appAct)conv=parseInt(appAct.value);
+        const cpa=conv>0?spent/conv:null;
+        rmk={name:'RMKT · Buen Fin',st:a.effective_status==='ACTIVE'?'active':'paused',spend:Math.round(spent*100)/100,imp:imps,reach,clicks,ctr:Math.round(ctr*100)/100,cpc:Math.round(cpc*100)/100,conv,convType:'aplicaciones',cpa:cpa?Math.round(cpa*100)/100:null,freq:Math.round(freq*100)/100};
+      }
+      isLive=true;
+    }catch(e){console.warn('BF Meta live fetch failed',e);}
+  }
+
+  const badge=document.getElementById('bfMetaLive');
+  if(badge)badge.style.display=isLive?'':'none';
+
+  const totalMetaSpend=mc.spend+rmk.spend;
+  const totalMetaConv=mc.conv+rmk.conv;
+  const totalMetaCPA=totalMetaConv>0?totalMetaSpend/totalMetaConv:0;
+  const g=buenFinData.google;
+  const gSpend=g.spend;
+  const gConv=g.conv||0;
+  const totalSpend=totalMetaSpend+gSpend;
+  const totalConv=totalMetaConv+gConv;
+  const totalCPA=totalConv>0?totalSpend/totalConv:0;
+  const totalImp=mc.imp+rmk.imp+g.imp;
+  const totalReach=mc.reach+rmk.reach;
+  const totalClicks=mc.clicks+rmk.clicks+g.clicks;
+  const bfVentas=Object.values(buenFinData.ventasPorCanal).reduce((s,v)=>s+v,0);
+
+  document.getElementById('bfKpis').innerHTML=`
+    <div class="kc hero"><div class="kl">Inversión total Buen Fin</div><div class="kv mono">${moneyK(totalSpend)}</div><div class="kf">Meta ${money(totalMetaSpend)} + Google ${money(gSpend)}</div></div>
+    <div class="kc mc"><div class="kl">Conversiones totales</div><div class="kv mono">${totalConv}</div><div class="kf">Meta ${totalMetaConv} apps + Google ${gConv} conv · CPA ${totalCPA>0?money(totalCPA):'—'}</div></div>
+    <div class="kc"><div class="kl">Impresiones</div><div class="kv mono">${num(totalImp)}</div><div class="kf">Alcance Meta: ${num(totalReach)}</div></div>
+    <div class="kc"><div class="kl">Clics</div><div class="kv mono">${num(totalClicks)}</div><div class="kf">Meta ${num(mc.clicks+rmk.clicks)} + Google ${num(g.clicks)}</div></div>
+    <div class="kc ${bfVentas>0?'good':''}"><div class="kl">Ventas Buen Fin</div><div class="kv mono">${bfVentas}</div><div class="kf">${buenFinData.totalIngresoBF>0?money(buenFinData.totalIngresoBF):'Periodo inicia hoy 13 nov'}</div></div>
+    <div class="kc"><div class="kl">Días activos</div><div class="kv mono">10</div><div class="kf">Warm-up 9d + Promo 5d</div></div>
+  `;
+
+  const rows=[mc,rmk];
+  document.getElementById('bfMetaTable').querySelector('tbody').innerHTML=rows.map(c=>{
+    const cpaStr=c.cpa?money(c.cpa):'—';
+    const cpaCol=!c.cpa?MUT:c.cpa<500?'#0A7F58':c.cpa<3000?INK:MAG;
+    return `<tr><td class="name">${c.name}</td><td><span class="tag ${c.st==='active'?'active':'paused'}">${c.st}</span></td><td class="mono">${money(c.spend)}</td><td class="mono">${num(c.imp)}</td><td class="mono">${num(c.reach)}</td><td class="mono">${num(c.clicks)}</td><td class="mono">${c.ctr}%</td><td class="mono">${money(c.cpc)}</td><td class="mono" style="font-weight:600">${c.conv}</td><td class="mono" style="color:${cpaCol};font-weight:600">${cpaStr}</td><td class="mono">${c.freq}</td></tr>`;
+  }).join('')+`<tr style="border-top:2px solid var(--line)"><td class="name" style="font-weight:700">Total Meta</td><td></td><td class="mono" style="font-weight:700">${money(totalMetaSpend)}</td><td class="mono" style="font-weight:700">${num(totalImp)}</td><td class="mono" style="font-weight:700">${num(totalReach)}</td><td class="mono" style="font-weight:700">${num(totalClicks)}</td><td></td><td></td><td class="mono" style="font-weight:700">${totalMetaConv}</td><td class="mono" style="font-weight:700">${totalMetaCPA>0?money(totalMetaCPA):'—'}</td><td></td></tr>`;
+
+  if(g.spend>0){
+    const gCpa=g.conv>0?money(g.spend/g.conv):'—';
+    const gCpaCol=!g.conv?MUT:(g.spend/g.conv)<100?'#0A7F58':INK;
+    document.getElementById('bfGooglePanel').innerHTML=`<div class="tbl-wrap" style="border:none"><table><thead><tr><th>Campaña</th><th>Estado</th><th>Inversión</th><th>Impr.</th><th>Clics</th><th>CTR</th><th>CPC</th><th>Conv.</th><th>CPA</th></tr></thead><tbody><tr><td class="name">${g.name}</td><td><span class="tag ${g.st==='active'?'active':'paused'}">${g.st}</span></td><td class="mono">${money(g.spend)}</td><td class="mono">${num(g.imp)}</td><td class="mono">${num(g.clicks)}</td><td class="mono">${g.ctr}%</td><td class="mono">${money(g.cpc)}</td><td class="mono" style="font-weight:600">${g.conv||0}</td><td class="mono" style="color:${gCpaCol};font-weight:600">${gCpa}</td></tr></tbody></table></div>`;
+  }else{
+    document.getElementById('bfGooglePanel').innerHTML='<div style="color:var(--muted);font-size:13px;padding:12px;background:#FBFBFC;border-radius:10px">Datos de Google Ads pendientes. Actualizar cuando haya datos de la campaña Buen Fin en Google.</div>';
+  }
+
+  const channels=[
+    {name:'Meta Ads',utm:'RO_MX_SAL_PRO_Buen_Fin',ventas:buenFinData.ventasPorCanal.meta,color:BLUE},
+    {name:'Google Ads',utm:'ro_mx_sal_pro_buen_fin',ventas:buenFinData.ventasPorCanal.google,color:AMB},
+    {name:'Email (Brevo)',utm:'buen_fin_2026',ventas:buenFinData.ventasPorCanal.mail,color:VIO},
+    {name:'WhatsApp',utm:'carrito_abandonado',ventas:buenFinData.ventasPorCanal.whatsapp,color:LIME},
+    {name:'Orgánico / Otros',utm:'—',ventas:buenFinData.ventasPorCanal.organico,color:MUT}
+  ];
+  const totalBFV=channels.reduce((s,c)=>s+c.ventas,0);
+
+  document.getElementById('bfSalesKpis').innerHTML=channels.map(c=>`<div class="kc"><div class="kl">${c.name}</div><div class="kv mono" style="color:${c.color}">${c.ventas}</div><div class="kf">ventas Buen Fin</div></div>`).join('');
+
+  document.getElementById('bfSalesTable').querySelector('tbody').innerHTML=channels.map(c=>`<tr><td class="name" style="font-weight:600">${c.name}</td><td class="mono" style="font-size:11px;color:var(--muted)">${c.utm}</td><td class="mono" style="font-weight:700;color:${c.color}">${c.ventas}</td><td class="mono">—</td></tr>`).join('')+`<tr style="border-top:2px solid var(--line)"><td class="name" style="font-weight:700">Total</td><td></td><td class="mono" style="font-weight:700">${totalBFV}</td><td class="mono" style="font-weight:700">${buenFinData.totalIngresoBF>0?money(buenFinData.totalIngresoBF):'—'}</td></tr>`;
+
+  // Charts
+  kill('bfSpendChart');
+  const spCtx=document.getElementById('bfSpendChart');
+  if(spCtx){
+    const spLabels=['Buen Fin (directo)','RMKT Buen Fin','Google Buen Fin'];
+    const spData=[mc.spend,rmk.spend,g.spend];
+    const spColors=[MAG,VIO,AMB];
+    reg_['bfSpendChart']=new Chart(spCtx,{type:'doughnut',data:{labels:spLabels,datasets:[{data:spData,backgroundColor:spColors,borderWidth:2,borderColor:'#fff'}]},options:{responsive:true,maintainAspectRatio:false,cutout:'55%',plugins:{legend:{position:'bottom',labels:{usePointStyle:true,boxWidth:8,padding:14}},tooltip:{callbacks:{label:c=>c.label+': '+money(c.raw)}}}}});
+  }
+
+  kill('bfSalesChart');
+  const slCtx=document.getElementById('bfSalesChart');
+  if(slCtx){
+    const slLabels=channels.map(c=>c.name);
+    const slData=channels.map(c=>c.ventas);
+    const slColors=channels.map(c=>c.color);
+    reg_['bfSalesChart']=new Chart(slCtx,{type:'bar',data:{labels:slLabels,datasets:[{data:slData,backgroundColor:slColors,borderRadius:4,barThickness:28}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.raw+' ventas'}}},scales:{x:{grid:{display:false},ticks:{font:{size:11}}},y:{grid:{color:LINE,drawTicks:false},ticks:{font:{family:'IBM Plex Mono',size:11},stepSize:1}}}}});
+  }
+
+  // Creativos table
+  const sorted=[...buenFinCreatives].sort((a,b)=>b.spend-a.spend);
+  const crTbody=document.getElementById('bfCreativesTable')?.querySelector('tbody');
+  if(crTbody){
+    crTbody.innerHTML=sorted.map(c=>{
+      const phaseTag=c.phase==='Warm-up'?'paused':'active';
+      const typeIcon=c.type==='VID'?'&#9654;':'&#9632;';
+      const cpaStr=c.cpa?money(c.cpa):'—';
+      const cpaCol=!c.cpa?MUT:c.cpa<200?'#0A7F58':c.cpa<500?INK:MAG;
+      return `<tr><td class="name">${c.name}</td><td style="font-size:11px">${typeIcon} ${c.type==='VID'?'Video':'Imagen'}</td><td><span class="tag ${phaseTag}">${c.phase}</span></td><td style="font-size:11px">${c.camp}</td><td class="mono">${money(c.spend)}</td><td class="mono">${num(c.imp)}</td><td class="mono">${num(c.clicks)}</td><td class="mono">${c.ctr}%</td><td class="mono">${c.cpc?money(c.cpc):'—'}</td><td class="mono" style="font-weight:600">${c.conv}</td><td class="mono" style="color:${cpaCol};font-weight:600">${cpaStr}</td></tr>`;
+    }).join('');
+  }
+
+  // Creative charts — aggregate by unique creative name
+  const crAgg={};
+  buenFinCreatives.forEach(c=>{
+    if(!crAgg[c.name])crAgg[c.name]={spend:0,conv:0};
+    crAgg[c.name].spend+=c.spend;
+    crAgg[c.name].conv+=c.conv;
+  });
+  const crNames=Object.keys(crAgg).sort((a,b)=>crAgg[b].spend-crAgg[a].spend);
+  const crColors=[MAG,VIO,LIME,AMB,BLUE,MUT,'#E11D48','#7C3AED'];
+
+  kill('bfCreativeSpendChart');
+  const cspCtx=document.getElementById('bfCreativeSpendChart');
+  if(cspCtx){
+    reg_['bfCreativeSpendChart']=new Chart(cspCtx,{type:'bar',data:{labels:crNames,datasets:[{data:crNames.map(n=>crAgg[n].spend),backgroundColor:crColors.slice(0,crNames.length),borderRadius:4,barThickness:22}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>money(c.raw)}}},scales:{x:{grid:{color:LINE,drawTicks:false},ticks:{font:{family:'IBM Plex Mono',size:10},callback:v=>moneyK(v)}},y:{grid:{display:false},ticks:{font:{size:10}}}}}});
+  }
+
+  kill('bfCreativeConvChart');
+  const ccvCtx=document.getElementById('bfCreativeConvChart');
+  if(ccvCtx){
+    const convNames=crNames.filter(n=>crAgg[n].conv>0);
+    reg_['bfCreativeConvChart']=new Chart(ccvCtx,{type:'bar',data:{labels:convNames.length?convNames:['Sin conversiones aún'],datasets:[{data:convNames.length?convNames.map(n=>crAgg[n].conv):[0],backgroundColor:convNames.length?crColors.slice(0,convNames.length):['#E5E7EB'],borderRadius:4,barThickness:22}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.raw+' apps'}}},scales:{x:{grid:{color:LINE,drawTicks:false},ticks:{font:{family:'IBM Plex Mono',size:10},stepSize:1}},y:{grid:{display:false},ticks:{font:{size:10}}}}}});
+  }
+
+  // Insights
+  const insHTML=i=>`<div class="ins ${i.cls}"><div class="k mono">${i.k}</div><h4>${i.h}</h4><p>${i.p}</p></div>`;
+  const bfIns=[];
+  bfIns.push({cls:'good',k:'INVERSIÓN',h:`${money(totalMetaSpend)} invertidos en Meta (warm-up + promo)`,p:`Campaña directa: <b>${money(mc.spend)}</b> (${mc.conv} apps, CPA ${mc.cpa?money(mc.cpa):'—'}). RMKT: <b>${money(rmk.spend)}</b> (${rmk.conv} apps, CPA ${rmk.cpa?money(rmk.cpa):'—'}). El RMKT tiene mejor CPA por audiencia caliente.`});
+  if(totalMetaConv>0){
+    bfIns.push({cls:totalMetaCPA<400?'good':'watch',k:'CPA BUEN FIN',h:`CPA promedio: ${money(totalMetaCPA)}`,p:`${totalMetaConv} aplicaciones con inversión de <b>${money(totalMetaSpend)}</b>. ${totalMetaCPA<400?'CPA competitivo para campaña de temporalidad.':'CPA alto — evaluar si la conversión a venta justifica el gasto.'}`});
+  }
+  // Creative insight
+  const topCr=sorted.find(c=>c.conv>0);
+  if(topCr){
+    bfIns.push({cls:'good',k:'TOP CREATIVO',h:`"${topCr.name}" (${topCr.camp}) con mejor CPA: ${money(topCr.cpa)}`,p:`${topCr.conv} conversiones con <b>${money(topCr.spend)}</b> de inversión. Tipo: ${topCr.type==='VID'?'Video':'Imagen'}, fase: ${topCr.phase}. Los videos de warm-up muestran buen rendimiento inicial.`});
+  }
+  if(bfVentas===0){
+    bfIns.push({cls:'watch',k:'VENTAS',h:'Buen Fin inicia hoy — 0 ventas registradas',p:'El periodo promocional es <b>13-17 nov</b>. Las ventas se irán registrando en el Sheets conforme entren pagos. Monitorear diariamente para medir conversión real por canal.'});
+  }else{
+    bfIns.push({cls:'good',k:'VENTAS',h:`${bfVentas} ventas en el periodo Buen Fin`,p:`Distribución: Meta <b>${buenFinData.ventasPorCanal.meta}</b>, Google <b>${buenFinData.ventasPorCanal.google}</b>, Email <b>${buenFinData.ventasPorCanal.mail}</b>, WhatsApp <b>${buenFinData.ventasPorCanal.whatsapp}</b>.`});
+  }
+  document.getElementById('bfInsights').innerHTML=bfIns.map(insHTML).join('');
 }
 
 // ═══════════════════════════════════════════════════════════════════
